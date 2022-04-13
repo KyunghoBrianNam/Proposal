@@ -1,0 +1,76 @@
+\documentclass{osu-thesis}
+
+\usepackage{siunitx}
+\sisetup{round-mode=places, round-precision=3}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,matrix}
+\usetikzlibrary{automata, positioning, arrows}
+\tikzset{->, >=stealth', node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $}
+
+\usepackage{lipsum}
+
+\setfigurepath{Figures}
+\setlistingpath{Source}
+\addbibresource{References/Example.bib}
+% \bibliography{References/Example.bib}
+
+
+
+%%%% Packages
+
+\usepackage{graphicx}
+\usepackage{algorithm}
+% \usepackage{booktabs}
+% \usepackage[noend]{algpseudocode}
+
+
+\usepackage{amsmath}
+
+%%%%
+
+
+\begin{document}	
+
+\settitle{SELF-TRAINABLE 3D-PRINTED PROSTHETIC HANDS}
+\setabstracttitle{SELF-TRAINABLE 3D-PRINTED PROSTHETIC HANDS}
+\setauthor{KYUNGHO NAM}
+\setdegree{Doctor of Philosophy}
+\setmajor{Computer Science}
+\setdegreeOne{%
+  Bachelor of Science in Electrical Engineering \\
+  Oklahoma State University \\
+  Stillwater, Oklahoma \\ 2015}
+% \setdegreeTwo{%
+%   Doctor of Philosophy in Computer Science \\
+%   Oklahoma State University \\
+%   Stillwater, Oklahoma \\ 2022}
+\setgraddate{December, 2022}
+\setadvisor{Christopher John Crick}
+\setmemberOne{Blayne E. Mayfield}
+\setmemberTwo{Nohpill Park}
+% \setmemberThree{Member Three}
+\setmemberOutside{Guoliang Fan}
+\frontmatter
+\thetitlepage
+\approvalpage
+\input{Chapters/acknowledgements}
+\input{Chapters/abstract}
+\tableofcontents
+\listoftables
+\listoffigures
+\mainmatter
+\pagestyle{osu}
+\input{Chapters/chapterOne}
+\input{Chapters/chapterTwo}
+\input{Chapters/chapterThree}
+\input{Chapters/chapterFour}
+\input{Chapters/chapterFive}
+\printbibliography[title=References]
+\appendix
+% \input{Chapters/appendixA}
+% \input{Chapters/appendixB}
+% \input{Chapters/appendixC}
+\input{Chapters/vita}
+
+\end{document}

@@ -1,0 +1,63 @@
+\input{Chapters/chapterTwo}\chapter{Introduction}
+
+\section{The first section which has an incredibly, incredibly, 
+  incredibly, incredibly, incredibly, long title}
+
+\subsection{The first subsection which has an incredibly, incredibly, 
+  incredibly, incredibly, incredibly, long title}
+\lipsum[5-6] (See Figure~\ref{fig:11}.)
+
+\singlefigure{fig:11}{example-image-a.png}{The first figure which has an incredibly, incredibly, incredibly, incredibly, incredibly, long title}{\lipsum[7]}
+
+\hdoublefigure{fig:12}{example-image-b.png}{example-image-c.png}{Two letters}{The letter ``B''.}{The letter ``C''.}
+
+\subsection{Second subsection}
+\lipsum[8]\footnote{This can be seen in Figure~\ref{fig:12}~(a) and (b).}
+
+\begin{figure}[t]
+  \centering
+  \begin{minipage}[t]{\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \node[state, initial, accepting] (q1) {\(q_1\)};
+        \node[state, accepting, right of=q1] (q2) {\(q_2\)};
+        \node[state, accepting, above right of=q2] (q3) {\(q_3\)};
+        \node[state, accepting, right of=q3] (q4) {\(q_4\)};
+        \node[state, below right of=q2] (q5) {\(q_5\)};
+        \node[state, accepting, right of=q5] (q6) {\(q_6\)};
+        \draw (q1) edge[above] node{\(\varepsilon,\varepsilon\rightarrow\$\)} (q2)
+        (q2) edge[loop right] node{\(a,\varepsilon\rightarrow a\)} (q2)
+        (q2) edge[above left] node{\(b,a\rightarrow\varepsilon\)} (q3)
+        (q2) edge[below left] node{\(\varepsilon,\varepsilon\rightarrow\varepsilon\)} (q5)
+        (q3) edge[above] node{\(c,\varepsilon\rightarrow\varepsilon\)} (q4)
+        (q3) edge[loop above] node{\(b,a\rightarrow\varepsilon\)} (q3)
+        (q4) edge[loop above] node{\(c,\varepsilon\rightarrow\varepsilon\)} (q4)
+        (q5) edge[loop below] node{\(b,\varepsilon\rightarrow\varepsilon\)} (q5)
+        (q5) edge[below] node{\(c,a\rightarrow\varepsilon\)} (q6)
+        (q6) edge[loop below] node{\(c,a\rightarrow\varepsilon\)} (q6);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+  \caption[The first TikZ figure which has an incredibly, incredibly, incredibly, incredibly, incredibly, long title]{\lipsum[6]}
+  \label{fig:13}
+\end{figure}
+
+\section{Second section}
+\lipsum[9] (\cite{wombat2016}, \cite{lion2010})
+This can be seen in Figure~\ref{fig:13}.
+
+\section{Third section}
+\lipsum[6]
+This can be seen in Algorithm~\ref{alg:11}.
+\begin{singlealgorithm}{alg:11}{Euclid's algorithm}
+  \Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of $a$ and $b$}
+  \State $r\gets a \bmod b$
+  \While{$r\not=0$} \Comment{We have the answer if $r$ is 0}
+  \State $a \gets b$
+  \State $b \gets r$
+  \State $r \gets a \bmod b$
+  \EndWhile
+  \State \textbf{return} $b$\Comment{The g.c.d. is $b$}
+  \EndProcedure
+\end{singlealgorithm}
+\lipsum[6]
